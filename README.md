@@ -1,38 +1,53 @@
-# create-svelte
+# PennyWise
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+PennyWise is an expense tracker web app that helps you manage your finance effieciently. With features like authentication, detailed charts, and an overview of your expenses and incomes, PennyWise makes budgeting easy and intuitive. The credentials given by users are only for the purpose of securing and authenticating the data, It is not used of other purpose.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Authentication**: Securely log in and manage your account.
+- **Expense Tracking**: Keep track of your daily, weekly and monthly expenses.
+- **Income Tracking**: Record and categorize your incomes.
+- **Charts and Overviews**: Visualize your financial data with charts and summaries.
+- **Categorization**: Categorize your expenses and incomes for better insights.
+- **Responsive Design**: Use PennyWise seamlessly on any device.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Tech Stack
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+- **Frontend**: SvelteKit
+- **Backend**: NodeJS
+- **Database**: SQLite
 
-## Developing
+## Installation
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
+1. Clone the repository:
 
 ```bash
-npm run build
+$ git clone https://github.com/raj-p26/expense-tracker.git
+$ cd expense-tracker
 ```
 
-You can preview the production build with `npm run preview`.
+2. Install dependencies:
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+```bash
+$ npm install # or bun install
+```
+
+3. Run the development server:
+
+```bash
+$ npm run dev # or bun run dev
+```
+
+4. Open your browser and navigate to `http://localhost:3000`
+
+## Usage
+
+1. **Signup/Log In**: Create an account or log in to your existing account.
+2. **Add Expenses**: Navigate to the "Add Expense" page to record your expenses.
+3. **Add Incomes**: Navigate to the "Add Incomes" page to record your incomes.
+4. **View Charts**: Navigate to the "Overview" page to see detailed charts of your expenses and incomes.
+5. **Filter**: Filter your expenses and incomes based on Category.
+
+## License
+
+This project is licensed under Apache License 2.0. See the [LICENSE](LICENSE) file for more details.
