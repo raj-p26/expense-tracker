@@ -28,6 +28,21 @@
   --on-secondary-dark: #253140;
   --tertiary-dark: #d6bee4;
   --on-tertiary-dark: #3b2948;
+  --error-dark: #ffb4ab;
+  --on-error-dark: #690005;
+
+  /* dark scheme containers */
+  --primary-container-dark: #194975;
+  --on-primary-container-dark: #d1e4ff;
+  --secondary-container-dark: #3b4858;
+  --on-secondary-container-dark: #d7e3f7;
+  --tertiary-container-dark: #523f5f;
+  --on-tertiary-container-dark: #f2daff;
+  --error-container-dark: #93000a;
+  --on-error-container-dark: #ffdad6;
+
+  --on-surface-dark: #e1e2e8;
+  --outline-dark: #8d9199;
 }
 
 * {

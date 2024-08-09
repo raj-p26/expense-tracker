@@ -14,7 +14,7 @@ PennyWise is an expense tracker web app that helps you manage your finance effie
 ## Tech Stack
 
 - **Frontend**: SvelteKit
-- **Backend**: NodeJS
+- **Backend**: NodeJS, BunJS
 - **Database**: SQLite
 
 ## Installation
@@ -32,13 +32,27 @@ $ cd expense-tracker
 $ npm install # or bun install
 ```
 
-3. Run the development server:
+3. Database Setup:
+   Create a database file and add the `schema.sql` in it to have basic schema up and running. Replace `YOUR_DB` with your database name.
+
+```bash
+$ sqlite3 YOUR_DB < schema.sql
+```
+
+4. Setup Environment Variables:
+   Add the name of your db in `.env` file
+
+```plaintext
+DB_NAME=<YOUR-DB-NAME>
+```
+
+4. Run the development server:
 
 ```bash
 $ npm run dev # or bun run dev
 ```
 
-4. Open your browser and navigate to `http://localhost:3000`
+5. Open your browser and navigate to `http://localhost:3000`
 
 ## Usage
 

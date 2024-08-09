@@ -20,3 +20,8 @@ Thumbs.db
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 bun.lockb
+
+# Database
+*.db
+*.sqlite
+*.sqlite3

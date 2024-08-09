@@ -1,8 +1,12 @@
 <script lang="ts">
   import Modal from "$lib/components/Modal.svelte";
   import Button from "$lib/components/Button.svelte";
-
   import Input from "$lib/components/Input.svelte";
+  import { goto } from "$app/navigation";
+
+  export let data;
+
+  if (data.token) goto("/");
 
   $: openModal = false;
 </script>
@@ -20,7 +24,7 @@
     </p>
   </div>
   <div class="login-form">
-    <form>
+    <form method="post" action="?/login">
       <Input name="email" inputType="email" />
       <Input inputType="password" name="password" />
       <Button fullWidth>Login</Button>
@@ -35,11 +39,11 @@
 {#if openModal}
   <Modal on:close={() => (openModal = false)}>
     <div slot="head">
-      <h1 style:font-weight="normal">Sign Up</h1>
+      <h1 style:font-weight="normal">Register</h1>
       <p style:font-weight="lighter">Its quick and easy</p>
     </div>
 
-    <form>
+    <form method="post" action="?/register">
       <Input name="username" />
       <Input name="email" inputType="email" />
       <Input name="password" inputType="password" />

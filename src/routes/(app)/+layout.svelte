@@ -1,11 +1,12 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  let token: string | null;
+
+  export let data;
 
   onMount(() => {
-    token = localStorage.getItem("userToken");
-
-    if (!token) location.href = "/login";
+    if (!data.token) {
+      location.href = "/login";
+    }
   });
 </script>
 
@@ -18,7 +19,7 @@
       <li><a href="/">Overview</a></li>
       <li><a href="/">Incomes</a></li>
       <li><a href="/">Expenses</a></li>
-      {#if token}
+      {#if data.token}
         <li><a href="/">Logout</a></li>
       {:else}
         <li><a href="/login">Login/Signup</a></li>
@@ -27,7 +28,7 @@
   </div>
 </nav>
 
-{#if !token}
+{#if !data.token}
   <div class="err">
     <h1>How are you even here?</h1>
   </div>
