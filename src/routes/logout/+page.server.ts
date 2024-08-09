@@ -4,6 +4,7 @@ export const load = () => {
   redirect(302, "/");
 };
 
+// didn't come up with any other ideas
 export const actions = {
   default: ({ cookies }) => {
     if (cookies.get("token"))

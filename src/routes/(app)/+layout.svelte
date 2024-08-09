@@ -9,6 +9,10 @@
   });
 </script>
 
+<svelte:head>
+  <title>PennyWise | Dashboard</title>
+</svelte:head>
+
 <Navbar token={data.token} />
 
 {#if !data.token}
