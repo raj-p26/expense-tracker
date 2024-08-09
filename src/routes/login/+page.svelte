@@ -3,8 +3,10 @@
   import Button from "$lib/components/Button.svelte";
   import Input from "$lib/components/Input.svelte";
   import { goto } from "$app/navigation";
+  import { enhance } from "$app/forms";
 
   export let data;
+  export let form;
 
   if (data.token) goto("/");
 
@@ -24,9 +26,17 @@
     </p>
   </div>
   <div class="login-form">
-    <form method="post" action="?/login">
-      <Input name="email" inputType="email" />
-      <Input inputType="password" name="password" />
+    <form method="post" action="?/login" use:enhance>
+      <Input
+        name="email"
+        inputType="email"
+        errorMessage={form?.loginEmailError || ""}
+      />
+      <Input
+        inputType="password"
+        name="password"
+        errorMessage={form?.loginPasswordError || ""}
+      />
       <Button fullWidth>Login</Button>
     </form>
     <div class="hr" />
@@ -43,10 +53,18 @@
       <p style:font-weight="lighter">Its quick and easy</p>
     </div>
 
-    <form method="post" action="?/register">
-      <Input name="username" />
-      <Input name="email" inputType="email" />
-      <Input name="password" inputType="password" />
+    <form method="post" action="?/register" use:enhance>
+      <Input name="username" errorMessage={form?.usernameError || ""} />
+      <Input
+        name="email"
+        inputType="email"
+        errorMessage={form?.emailError || ""}
+      />
+      <Input
+        name="password"
+        inputType="password"
+        errorMessage={form?.passwordError || ""}
+      />
       <Button fullWidth>Sign Up</Button>
     </form>
   </Modal>

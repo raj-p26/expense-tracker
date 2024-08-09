@@ -1,32 +1,15 @@
 <script lang="ts">
+  import Navbar from "$lib/components/Navbar.svelte";
   import { onMount } from "svelte";
 
   export let data;
 
   onMount(() => {
-    if (!data.token) {
-      location.href = "/login";
-    }
+    if (!data.token) location.href = "/login";
   });
 </script>
 
-<nav>
-  <div class="brand">PennyWise</div>
-
-  <button class="mid-screen-nav-btn"> </button>
-  <div class="nav-links">
-    <ul>
-      <li><a href="/">Overview</a></li>
-      <li><a href="/">Incomes</a></li>
-      <li><a href="/">Expenses</a></li>
-      {#if data.token}
-        <li><a href="/">Logout</a></li>
-      {:else}
-        <li><a href="/login">Login/Signup</a></li>
-      {/if}
-    </ul>
-  </div>
-</nav>
+<Navbar token={data.token} />
 
 {#if !data.token}
   <div class="err">
@@ -39,24 +22,6 @@
 {/if}
 
 <style>
-  nav {
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
-  .nav-links > ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-  }
-
   .err {
     height: 100vh;
     display: flex;
