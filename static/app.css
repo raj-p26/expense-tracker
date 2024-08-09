@@ -18,6 +18,7 @@
   --error-container: #ffdad6;
   --on-error-container: #410002;
 
+  --surface: #f8f9ff;
   --on-surface: #191c20;
   --outline: #73777f;
 
@@ -41,6 +42,7 @@
   --error-container-dark: #93000a;
   --on-error-container-dark: #ffdad6;
 
+  --surface-dark: #111418;
   --on-surface-dark: #e1e2e8;
   --outline-dark: #8d9199;
 }
